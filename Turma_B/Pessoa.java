@@ -8,9 +8,13 @@ public class Pessoa{
     public Pessoa(String nome, int idade){
         setNome(nome);
         setIdade(idade);
-
     }
     
+    public void setPessoa(String nome,int idade){
+        setNome(nome);
+        setIdade(idade);
+    }
+
     public void setNome(String nome){
         this.nome = nome;
     }
