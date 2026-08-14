@@ -10,6 +10,7 @@ public class Principal{
         Pessoa obj1 = new Pessoa();
         Pessoa obj2 = new Pessoa("Rafael", 35);
         Pessoa obj3 = new Pessoa();
+        Pessoa obj4 = new Pessoa("Mateus", 19, new Endereco("Mateus", 19, "Copacabana"));
 
         System.out.print("Digite o nome: ");
         obj3.setNome(input.nextLine());
@@ -24,10 +25,13 @@ public class Principal{
         System.out.println(obj1.toString());
         System.out.println(obj2.toString());
         System.out.println(obj3.toString());
+        System.out.println(obj4.toString());
 
         listaP.add(obj1);
         listaP.add(obj2);
         listaP.add(obj3);
+        listaP.add(obj4);
+
 
         for(Pessoa auxP : listaP){
             System.out.println(auxP.toString());
@@ -37,6 +41,12 @@ public class Principal{
         listaP.get(0).setIdade(1);
         System.out.println(listaP.get(0).toString());
         System.out.println(obj1.toString());
+
+        obj4.setIdade(1);
+        obj4.setNome("joaquim");
+        obj4.getEnd().setNumero(1);
+        obj4.getEnd().setBairro("Caca");
+        obj4.getEnd().setRua("Catedral das dores");
 
         input.close();
     }
