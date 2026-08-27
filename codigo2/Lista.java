@@ -13,6 +13,48 @@ public class Lista<T>{
         this.ultimoNo = null;
     }
 
+    public void addInicio(T dado){
+        No<T> novoNo = new No<>(dado);
+
+        if(primeiroNo == null){
+            primeiroNo = novoNo;
+            ultimoNo = novoNo;
+        }else{
+            novoNo.setNextNo(primeiroNo);
+            primeiroNo = novoNo;
+        
+        }
+    }
+
+    public void removeInicio(){
+        if(primeiroNo == null){
+            System.out.println("Lista vazia");
+        }else{
+            System.out.println("Dado: " + primeiroNo.getDado() + "removido!");
+            primeiroNo = getPrimeiroNo().getNextNo();
+
+        if(primeiroNo == ultimoNo){
+            primeiroNo = primeiroNo.getNextNo();
+            ultimoNo = ultimoNo.getNextNo();
+        }else{
+            primeiroNo = primeiroNo.getNextNo();
+        }
+        }
+    }
+
+    public void imprimeLista(){
+        if(primeiroNo == null){
+            System.out.println("Lista Vazia");
+        }else{
+            System.out.println("Dados da Lista" + getNomeLista());
+        }
+        No<T> iole = primeiroNo;
+        While(iole != null)}{
+            System.out.println(iole.toString()));
+            iole = iole.getNextNo();
+        }
+    }
+
     public void setNomeLista(String nomeLista){
         this.nomeLista = nomeLista;
     }
