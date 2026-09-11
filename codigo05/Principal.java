@@ -4,6 +4,8 @@ public class Principal{
 
         lista.addInicio("Rafael");
         lista.addInicio("Cecilia");
+        lista.addFinal("Joaquim");
+
         /* 
         NoDuplo<String> no1 = new NoDuplo<String>("Rafael");
         NoDuplo<String> no2 = new NoDuplo<String>("Cecília");
@@ -14,5 +16,10 @@ public class Principal{
         no2.setAnteriorNo(no1);
         no1.getProximoNo().getDado();
         */
+        lista.imprimeLista();
+        lista.addMeio("Lara", 2);
+        lista.imprimeLista();
+        lista.removeInicio();
+        lista.imprimeLista();
     }
 }
